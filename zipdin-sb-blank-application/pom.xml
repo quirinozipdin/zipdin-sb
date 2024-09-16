@@ -10,11 +10,8 @@
         <relativePath>../zipdin-sb-blank-parent</relativePath>
     </parent>
 
-    <groupId>com.zipdin</groupId>
     <artifactId>zipdin-sb-blank-application</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>Zipdin Spring Boot Blank</name>
-    <description>Initial (blank) application template for starting a new backend project.</description>
+    <packaging>war</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -49,6 +46,11 @@
             <optional>true</optional>
         </dependency>
         <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
@@ -56,12 +58,24 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>ch.qos.logback</groupId>
+                    <artifactId>logback-classic</artifactId>
+                </exclusion>
+            </exclusions>
             <scope>test</scope>
         </dependency>
     </dependencies>
 
     <build>
+        <finalName>zipdinsb</finalName>
         <plugins>
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>4.0.0.Final</version>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

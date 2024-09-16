@@ -12,11 +12,9 @@
     <artifactId>zipdin-sb-blank-infra</artifactId>
     <packaging>jar</packaging>
 
-    <name>zipdin-sb-blank-infra</name>
-    <url></url>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>21</java.version>
     </properties>
 
     <dependencies>
