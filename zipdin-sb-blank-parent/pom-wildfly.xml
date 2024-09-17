@@ -34,11 +34,6 @@
         <dependencies>
             <dependency>
                 <groupId>com.zipdin</groupId>
-                <artifactId>zipdin-sb-blank-application</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.zipdin</groupId>
                 <artifactId>zipdin-sb-blank-domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -49,15 +44,19 @@
             </dependency>
             <dependency>
                 <groupId>com.zipdin</groupId>
+                <artifactId>zipdin-sb-blank-interfaces</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zipdin</groupId>
                 <artifactId>zipdin-sb-blank-infra</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.zipdin</groupId>
-                <artifactId>zipdin-sb-blank-interfaces</artifactId>
+                <artifactId>zipdin-sb-blank-application</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
-
 </project>
